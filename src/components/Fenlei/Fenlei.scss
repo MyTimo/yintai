@@ -1,0 +1,27 @@
+@function px2rem($px){
+  @return $px/100px *1rem;
+}
+
+#fenlei{
+	width:100%;
+
+	.hea{
+		overflow: hidden;
+		height:px2rem(40px);
+		border-bottom:px2rem(1px) solid #ccc;
+		width:100%;
+		div{
+			width:33%;
+			float:left;
+		}
+		.lef{
+			text-align: left
+		}
+		.mid{
+			text-align: center
+		}
+		.rig{
+			text-align: right
+		}
+	}
+}
