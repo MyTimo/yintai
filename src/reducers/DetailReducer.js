@@ -1,6 +1,6 @@
- const FenleiReducer = (state=[],action)=>{
+ const DetailReducer = (state=[],action)=>{
 	switch(action.type){
-		case "Fen":	
+		case "Detail_type":	
 
 			return action.payload;
 /*		case "Fens":
@@ -10,4 +10,4 @@
 	}
 }
 
-export default FenleiReducer
+export default DetailReducer

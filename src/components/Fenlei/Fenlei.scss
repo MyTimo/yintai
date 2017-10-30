@@ -1,27 +1,147 @@
 @function px2rem($px){
   @return $px/100px *1rem;
 }
-
+	*{
+		margin:0;
+		padding:0;
+	}
+li{
+	list-style:none;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+.red{
+	background:white;
+	color:red;
+}
 #fenlei{
+	// overflow: hidden;
 	width:100%;
-
 	.hea{
+		position:fixed;
+		z-index:1000;
+		background:white;
+		left:0;
+		top:0;
 		overflow: hidden;
 		height:px2rem(40px);
 		border-bottom:px2rem(1px) solid #ccc;
 		width:100%;
 		div{
-			width:33%;
 			float:left;
+			width:33%;
+			text-align: center;
+			line-height: px2rem(40px);
+			span{
+				padding:px2rem(10px);
+			}
 		}
 		.lef{
-			text-align: left
-		}
-		.mid{
-			text-align: center
+			span{
+				margin-left: px2rem(-70px);
+			}
 		}
 		.rig{
-			text-align: right
+			span{
+				margin-right: px2rem(-70px);
+			}
 		}
 	}
+	.inp{
+		// overflow: hidden;
+		width:100%;
+		position:fixed;
+		z-index:1000;
+		background:white;
+		left:0;
+		top:px2rem(40px);
+		border-bottom:px2rem(1px) solid #ccc;
+		.inpt{
+			border:px2rem(1px) solid #ccc;
+			padding:px2rem(10px);
+			margin:px2rem(10px);
+			border-radius:px2rem(5px);
+			input{
+				border:none;
+				width:px2rem(300px);
+				color:#ccc;
+				outline:none;
+			}
+			span{
+				i{
+					font-size:px2rem(20px);
+					border-left:px2rem(1px) solid #ccc;
+					padding-left:px2rem(10px);
+				}
+				
+			}
+		}
+	}
+	.pip{
+		// overflow: hidden;
+		position:relative;
+			left:0;
+			top:px2rem(105px);
+		.ios {
+			width:px2rem(94px);
+			position:fixed;
+			top:px2rem(105px);;
+			left:0;
+			float:left;
+			background:#f5f5f5;
+			.he {
+				text-align: center;
+			    height: px2rem(55px);
+			    line-height: px2rem(55px);
+			    border-right: px2rem(1px) solid #d2d2d2;
+			    color: #333;
+			}
+		}
+		.pics{
+			.lp{
+				overflow: hidden
+			}
+			position:absolute;
+			overflow: hidden;
+			left:px2rem(94px);
+			top:0;
+			.pic{
+			width:100%;
+			float:left;
+			padding:px2rem(5px);
+			.tit{
+				padding-top:px2rem(10px);
+				width:px2rem(261px);
+				height:px2rem(35px);
+			    background: url(../../style/img/category-area-title@3x.png) no-repeat;
+			    background-size: 100%;
+			    background-position: 50%;
+			    text-align:center;
+			    // line-height: px2rem(35px);
+			}
+			.qw{
+				overflow: hidden;
+				border-sizing:border-box;
+				width:100%;
+				.pit{
+					width:px2rem(86px);
+					float:left;
+					text-align:center;
+					img{
+						width:100%;
+					}
+					.it{
+						display:inline-block;
+						padding:px2rem(10px);
+					}
+				}
+			}
+   			
+		}	
+		}	
+		
+	}
+
 }
