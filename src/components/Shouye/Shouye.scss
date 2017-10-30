@@ -1,0 +1,223 @@
+@function px2rem($px){
+  @return $px/100px *1rem;
+}
+
+
+ul,li{
+	list-style: none;
+}
+#search{
+	width: 100%;
+    height: px2rem(55px);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    .header{
+    	position: relative;
+    	padding-top: px2rem(6px);
+    	.logo{
+    		position: absolute;
+    		left: 0;
+    		top: px2rem(6px);
+    		background: url('https://r.ytrss.com/mobile/img/newlogo.png') no-repeat;
+    		width: px2rem(74px);
+    		height: px2rem(42.5px);
+    		background-size: 100%;
+    	}
+    	.search{
+    		height: px2rem(42.5px);
+    		padding: 0 px2rem(55px) 0 px2rem(75px);
+    		.mid{
+    			height: px2rem(42.5px);
+    			border: px2rem(1px) solid #d2d2d2;
+    			border-radius: px2rem(5px);
+    			.midinput{
+    				position: relative;
+    				padding: px2rem(6px);
+    				#input-search{
+    					width: 100%;
+    					display: block;
+    					height: px2rem(30px);
+    					color: #cacaca;
+    					font-size: 80%;
+    					vertical-align: middle;
+    					border: 0 none;
+    					outline: none;
+    				}
+    				span{
+    					position: absolute;
+    					right: px2rem(5px);
+    					top: px2rem(6px);
+    					width: px2rem(36px);
+    					height: px2rem(30px);
+    					padding-left: px2rem(5px);
+    					border-left: px2rem(1px) solid #ddd;
+    					.iconfont{
+    						display: block;
+    						width: px2rem(20px);
+    						height: px2rem(20px);
+    						margin: px2rem(5px) auto;
+    						background: url('https://r.ytrss.com/mobile/img/home-search.png') 0 0 no-repeat;
+    						background-size: 100%;
+    					}
+    				}
+    			}
+    		}
+    	}
+    	.user{
+    		position: absolute;
+    		right: 0;
+    		top: px2rem(6px);
+    		width: px2rem(50px);
+    		height: px2rem(42.5px)px;
+    		a{
+    			display: block;
+    			width: px2rem(30px);
+    			height: px2rem(30px);
+    			margin: px2rem(6px) auto 0;
+    			background: url('https://r.ytrss.com/mobile/img/home-user.png') 0 0 no-repeat;
+    			background-size: 100%;
+    		}
+    	}
+    }
+}
+div{
+	    box-sizing: border-box
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.my-carousel{
+	top:px2rem(33px);
+	img{
+		width: 100%
+	}
+}
+
+#banner{
+	background-color: #fff;
+	margin-top:px2rem(27px);
+	.ban5-1{
+		width: 20%;
+    	float: left;
+    	padding: 0;
+    	img{
+    		vertical-align: top;
+    		display: block;
+    		width: 100%;
+    	}
+    	p{
+    		text-align: center;
+    		color: #666;
+    		font-size: px2rem(14px);
+    		height: px2rem(16px);
+    		margin: px2rem(8px) auto;
+    		text-align: center;
+    		overflow: hidden;
+    	}
+	}
+}
+
+#boom{
+	.boom-floor1{
+		position: relative;
+    	background-color: #f1f1f1;
+    	min-width: px2rem(320px);
+    	max-width: px2rem(640px);
+    	width: auto;
+    	overflow: hidden;
+    	padding-top: px2rem(5px);
+    	img{
+    		width: px2rem(375px);
+    		height: px2rem(28.6px)px;
+    	}
+	}
+	.boom-floor2{
+		background-color: #f1f1f1;
+	    min-width: px2rem(320px);
+    	max-width: px2rem(640px)	;
+    	width: auto;
+    	overflow-x: auto;
+    	ul{
+    		width: px2rem(845px);
+    		margin: 0 auto;
+    		padding: 5px 3px;
+    		background-color: #fff;
+    		li{
+    			float: left;
+    			width: px2rem(82.4px);
+    			padding: 0 px2rem(2px) 0 0;
+    			background-color: #fff;
+    			img{
+    				width: 100%;
+    			}
+    			.img{
+    					border: 1px solid #e0e0e0;
+    			}
+    			.word{
+    				text-align: left;
+    				height: 36px;
+    				line-height: 18px;
+    				margin: 5px auto;
+    				color: #666;
+    				overflow: hidden;
+    			}
+    			.price{
+    				margin-right: 8px;
+    				color: #e5004f;
+    				text-align: left;
+    			}
+    		}
+    	}
+	}
+	.boom-floor2::-webkit-scrollbar{
+		width: 0;
+	}
+	.boom-floor3{
+		position: relative;
+    	background-color: #f1f1f1;
+    	min-width: px2rem(320px);
+    	max-width: px2rem(640px);
+    	width: auto;
+    	overflow: hidden;
+    	margin-top: px2rem(-15px);
+    	img{
+    		width: px2rem(375px);
+    		height: px2rem(28.6px)px;
+    	}
+	}
+}
+
+#week{
+	.week-floor1{
+		position: relative;
+    	background-color: #f1f1f1;
+    	min-width: px2rem(320px);
+    	max-width: px2rem(640px);
+    	width: auto;
+    	overflow: hidden;
+    	padding-top: px2rem(5px);
+    	img{
+    		width: px2rem(375px);
+    		height: px2rem(28.6px)px;
+    	}
+	}
+	.week-floor2,.week-floor3{
+		div{
+			width: 50%;
+			display: inline-block;
+			img{
+				width: 100%
+			}
+		}
+	}
+	.week-floor4{
+		img{
+			width: 366px;
+    		height: 80.0625px;
+		}
+	}
+}

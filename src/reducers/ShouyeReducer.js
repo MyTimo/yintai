@@ -1,6 +1,6 @@
  const ShouyeReducer = (state=[],action)=>{
 	switch(action.type){
-		case "hello":			
+		case "Repeat_Show":
 			return action.payload;
 		default:
 			return state;

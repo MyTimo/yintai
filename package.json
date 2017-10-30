@@ -47,12 +47,18 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "antd": "^2.13.7",
+    "antd-mobile": "^2.0.0",
     "axios": "^0.17.0",
     "node-sass": "^4.5.3",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "react-swipe": "^5.1.0",
+    "react-swiper": "^0.1.5",
+    "rect": "^1.2.1",
     "redux": "^3.7.2",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "swipe-js-iso": "^2.0.4"
   },
   "jest": {
     "collectCoverageFrom": [

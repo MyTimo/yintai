@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#000000">
     <style type="text/css" media="screen">
          body{
-          font-size:16px;
+          font-size:14px;
         }
     </style>
     <!--
@@ -44,5 +44,13 @@
   </body>
   <script>
       document.documentElement.style.fontSize=document.documentElement.clientWidth/375*100+"px";
+  </script>
+  <script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./jquery.lazyload.min.js"></script>
+
+  <script type="text/javascript">
+    window.addEventListener("load", function(event) {
+      $("img.lazy").lazyload();
+    });
   </script>
 </html>
