@@ -20,10 +20,10 @@ const Routes = () => (
     
 
       <Route exact path="/" component={Shouye}/>
-      <Route path="/Fenlei" component={Fenlei}/>
+      <Route path="/Fenlei/:film_id" component={Fenlei}/>
       <Route path="/Mine" component={Mine}/>
       <Route path="/Qiangxian" component={Qiangxian}/>
-      <Route path="/Shoppingcar" component={Shoppingcar}/>
+      <Route path="/Shoppingcar" component={Shoppingcar}/> 
 
     </div>
   </Router>

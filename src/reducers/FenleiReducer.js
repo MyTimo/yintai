@@ -1,9 +1,13 @@
- const ShouyeReducer = (state=[],action)=>{
+ const FenleiReducer = (state=[],action)=>{
 	switch(action.type){
-		case "Fen":			
+		case "Fen":	
+
 			return action.payload;
+/*		case "Fens":
+			return action.payloads;*/
 		default:
 			return state;
 	}
 }
-export default ShouyeReducer;
+
+export default FenleiReducer
