@@ -51,6 +51,8 @@ class FenleiUI extends Component{
 				})														 	
 		}	
 
+
+
 		
 		// document.querySelector('.pic1 span:nth-of-type(9)').value.slice(0,4);
 									
@@ -72,7 +74,8 @@ class FenleiUI extends Component{
 						{
 							this.props.lists.map((item,index)=>{
 								// console.log(this.props.lis)
-								return <li className="he" active-class="red" key={item.id}><Link to={'/Fenlei/' + item.id}>{item.name}</Link></li>
+								return <li className="he" active-class="red" key={item.id}>
+								<Link to={'/Fenlei/' + item.id}>{item.name}</Link></li>
 							})
 						}					
 					</ul>
@@ -80,22 +83,28 @@ class FenleiUI extends Component{
 					{
 						<div className="lp">	
 							<div className="pic">
-								<div className="tit"><span>{this.props.lis.lis3}</span></div>	
-								<ul class="qw">
-								 	{items}
-								</ul>
+								<div className="tit"><span>{this.props.lis.lis3}</span></div>
+								<Link to={'/detail/'}>
+									<ul class="qw">
+									 	{items}
+									</ul>
+								</Link>	
 							</div>	
 							<div className="pic">
-								<div className="tit"><span>{this.props.lis.lis6}</span></div>	
-								<ul class="qw">
-								 	{itemes}
-								</ul>
+								<div className="tit"><span>{this.props.lis.lis6}</span></div>
+								<Link to={'/detail/'}>	
+									<ul class="qw">
+									 	{itemes}
+									</ul>
+								</Link>
 							</div>	
 							<div className="pic">
-								<div className="tit"><span>{this.props.lis.lis8}</span></div>	
+								<div className="tit"><span>{this.props.lis.lis8}</span></div>
+								<Link to={'/detail/'}>		
 								<ul class="qw">
 								 	{itemess}
 								</ul>
+								</Link>
 							</div>	
 						</div>
 
@@ -112,10 +121,13 @@ class FenleiUI extends Component{
 }
 
 function getData(dispatch){
-	console.log(this.props.match.params.film_id);
-	axios.get(`/Services/Proxy.ashx?r=0.8250198110285878&methodName=products.category.getcategory_3.0.0&method=products.category.getcategory&ver=3.0.0${this.props.match.params.film_id}`)
+	// console.log(this.props.match.params.film_id);
+	// var num = Math.random();
+	// console.log(num);
+			// console.log(this);
+	axios.get(`/Services/Proxy.ashx?r=0.6206932046652436&methodName=products.category.getcategory_3.0.0&method=products.category.getcategory&ver=3.0.0`)
 	.then((res)=>{
-		console.log(res.data.data.data);
+		// console.log(res);
 		dispatch({
 			type:"Fen",
 			payload:res.data.data.data
@@ -124,9 +136,9 @@ function getData(dispatch){
 }
 
 function getDatas(dispatch){
-	axios.get('/Services/Proxy.ashx?r=0.40535104772911246&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=88')
+	axios.get(`/Services/Proxy.ashx?r=0.40535104772911246&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=${this.match.params.film_id}`)
 	.then((res)=>{
-		console.log(res.data.data);
+		console.log(res);
 		dispatch({
 			type:"Fens",
 			payload:{lis1:res.data.data.recommend,
@@ -150,11 +162,11 @@ const mapState2props = (state,props)=>{
 
 const mapDispatch2props = (dispatch,props)=>{
 	return {
-		getList:()=>{
-			getData(dispatch)
+		getList:function (){
+			getData.bind(this)(dispatch)
 		},
-		getLists:()=>{
-			getDatas(dispatch)
+		getLists:function(){
+			getDatas.bind(this)(dispatch)
 		}
 	}
 }
