@@ -18,7 +18,21 @@ import {
 
 
 class DetailUI extends Component{
+	componentDidMount() {
+		console.log(this);
+		var id = 50003759;
+		this.props.getListes(id);		
+	}
 	render(){
+		var items = null;
+		if(this.props.listes){
+			items = this.props.listes.map((item,index)=>{
+				return 	<div>
+							<img src={item.image} />
+						</div>
+			})	
+		}
+		
 		return (
 			<div id="Detail">
 				<div className="hea">
@@ -30,18 +44,14 @@ class DetailUI extends Component{
 					<ul>
 						<li><span>默认</span><i></i></li>
 						<li><span>销量</span><i></i></li>
-						<li><span>价格</span><i></i></li>
-						<li><span>折扣</span><i></i></li>
+						<li><span>价格</span><b><i className="iconfont">&#xe510;</i><i className="iconfont">&#xe501;</i></b></li>
+						<li><span>折扣</span><b><i className="iconfont">&#xe510;</i><i className="iconfont">&#xe501;</i></b></li>
 						<li><span>筛选</span><i></i></li>
 					</ul>	
 				</div>
 				<div>
 					{
-						this.props.listes.map((item,index)=>{
-							return 	<div>
-										<img src={item.image} />
-									</div>
-						})						
+						items						
 					}
 				</div>	
 		
@@ -50,16 +60,20 @@ class DetailUI extends Component{
 	}
 }
 
-function getData(dispatch){
-	
-	axios.get(`/Services/Proxy.ashx?r=201710302102&method=products.getlist&ver=2.1&data=%7B%22order_type%22%3A0%2C%22page_index%22%3A1%2C%22displaycount%22%3A30%2C%22query_string%22%3A%22N%3D10001888%22%2C%22keyword%22%3A%22%22%7D`)
+
+
+function getDataes(dispatch,id){
+	console.log(this);
+	if(id){
+		axios.get(`/Services/Proxy.ashx?r=201710311602&method=products.getlist&ver=2.1&data=%7B%22order_type%22%3A0%2C%22page_index%22%3A1%2C%22displaycount%22%3A30%2C%22query_string%22%3A%22N%3D${id}%22%2C%22keyword%22%3A%22%22%7D`)
 	.then((res)=>{
-		console.log(res);
+		// console.log(res);
 		dispatch({
 			type:"Detail_type",
 			payload:res.data.data.product_list
 		})
 	})
+	}
 }
 
 const mapState2props = (state,props)=>{
@@ -70,8 +84,8 @@ const mapState2props = (state,props)=>{
 
 const mapDispatch2props = (dispatch,props)=>{
 	return {
-		getList:function (){
-			getData.bind(this)(dispatch)
+		getListes:function (id){
+			getDataes.bind(this)(dispatch,id)
 		}
 	}
 }

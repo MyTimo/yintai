@@ -67,6 +67,19 @@ a{
 					padding:px2rem(3px) 0;
 
 				}
+				b{
+					display:inline-block;
+					text-align:center;
+					.iconfont{
+					display:block;
+					font-size:px2rem(6px);
+					color:#d6d6d6;
+					}
+				}
+				
+			}
+			li:nth-of-type(3) span{
+				padding-top:px2rem(-6px);
 			}
 		}
 	}

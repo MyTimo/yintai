@@ -10,4 +10,4 @@ const DetailReducer = (state=[],action)=>{
 	}
 }
 
-export default DetailReducer
+export default DetailReducer;

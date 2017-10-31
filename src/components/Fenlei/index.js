@@ -27,8 +27,11 @@ class FenleiUI extends Component{
 		if(this.props.lis.lis4) {
 			items = this.props.lis.lis4.map((item,index)=>{
 			return 	<li key={item.categoryid} className="pit">
-				 		<div className="pic1"><img src={item.imageurl} /></div>
-				 		<div className="spa">{item.name}</div>
+						<Link to={`/Detail/${item.jumpurl.substring(item.jumpurl.indexOf('searchCondition=N%3D')+20,item.jumpurl.indexOf('searchCondition=N%3D')+28)}`}>
+}`}>
+					 		<div className="pic1"><img src={item.imageurl} /></div>
+					 		<div className="spa">{item.name}</div>
+				 		</Link>
 			 		</li>
 			})																	 	
 		}
@@ -37,18 +40,21 @@ class FenleiUI extends Component{
 		if(this.props.lis.lis5) {
 			itemes = this.props.lis.lis5.map((item,index)=>{
 				return 	<li key={item.id} className="pit">
-					 		<div className="pic1"><img src={item.imageurl} /></div>
-					 		
+							<Link to={`/Detail/${item.jumpurl.substring(item.jumpurl.indexOf('searchCondition=N%3d')+20,item.jumpurl.indexOf('searchCondition=N%3d')+28)}`}>
+					 			<div className="pic1"><img src={item.imageurl} /></div>
+					 		</Link>
 				 		</li>
 				})														 	
 		}	
 
+	
 		var itemess = null;
 		if(this.props.lis.lis7) {
 			itemess = this.props.lis.lis7.map((item,index)=>{
 				return 	<li key={item.categoryid} className="pit">
+						<Link to={`/Detail/${item.jumpurl.substring(item.jumpurl.indexOf('searchCondition=N%3D')+20,item.jumpurl.indexOf('searchCondition=N%3D')+28)}`}>
 					 		<div className="pic1"><span className="it">{item.name}</span></div>
-					 		
+					 	</Link>	
 				 		</li>
 				})														 	
 		}	
@@ -86,27 +92,27 @@ class FenleiUI extends Component{
 						<div className="lp">	
 							<div className="pic">
 								<div className="tit"><span>{this.props.lis.lis3}</span></div>
-								<Link to={'/detail/'}>
+								
 									<ul class="qw">
 									 	{items}
 									</ul>
-								</Link>	
+								
 							</div>	
 							<div className="pic">
 								<div className="tit"><span>{this.props.lis.lis6}</span></div>
-								<Link to={'/detail/'}>	
+									
 									<ul class="qw">
 									 	{itemes}
 									</ul>
-								</Link>
+								
 							</div>	
 							<div className="pic">
 								<div className="tit"><span>{this.props.lis.lis8}</span></div>
-								<Link to={'/detail/'}>		
+										
 								<ul class="qw">
 								 	{itemess}
 								</ul>
-								</Link>
+								
 							</div>	
 						</div>
 
@@ -131,7 +137,7 @@ class FenleiUI extends Component{
 // }
 
 function getData(dispatch){
-	// console.log(this.props.match.params.film_id);
+	// console.log(this.props.match.params.detail_id);
 	// var num = Math.random();
 	// console.log(num);
 			// console.log(this);
