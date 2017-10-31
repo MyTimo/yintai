@@ -2,6 +2,14 @@ import React ,{ Component } from 'react';
 
 import {connect} from 'react-redux';
 import axios from 'axios';
+import{
+	BrowserRouter as Router,
+	Route,
+	Redirect,
+	Switch,
+	NavLink
+} from 'react-router-dom';
+
 
 
 
