@@ -1,0 +1,48 @@
+@function px2rem($px){
+  @return $px/100px *1rem;
+}
+	*{
+		margin:0;
+		padding:0;
+	}
+li{
+	list-style:none;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+
+#Footer{
+	background:white;
+	.cf{
+		background:white;
+		overflow: hidden;
+		position:fixed;
+		left:0;
+		bottom:0;
+		width:100%;
+		padding:px2rem(5px) 0;
+		color:#666;
+		border-top:px2rem(2px) solid rgba(6,6,6,0.1);
+		box-shadow:   0 px2rem(-1px) 0 #ccc; 
+		li{
+			width:20%;
+			float:left;
+			color:#666;
+			span{
+				display:inline-block;
+				width:100%;
+				text-align:center;
+				color:#666;
+			}
+			i{
+				font-size:px2rem(20px);
+				display:inline-block;
+				width:100%;
+				text-align:center;
+				color:#666;
+			}
+		}
+	}
+}

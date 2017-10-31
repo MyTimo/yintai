@@ -6,6 +6,7 @@ import Qiangxian from '../components/Qiangxian';
 import Fenlei from '../components/Fenlei';
 import Goods from '../components/Goods';
 import Detail from '../components/Detail/index';
+import Footer from '../components/Footer/index';
 
 
 import {
@@ -19,7 +20,7 @@ import {
 const Routes = () => (
   <Router>
     <div>
-      <Route exact path="/" component={Shouye}/>
+      <Route exact path="/" render={()=><div><Shouye /><Footer /></div>}/>
       <Route path="/Fenlei/:film_id?" component={Fenlei}/>
       <Route path="/Mine" component={Mine}/>
       <Route path="/Qiangxian" component={Qiangxian}/>
@@ -27,7 +28,7 @@ const Routes = () => (
       <Route path="/goods/:goods_id" component={Goods}/>
 
       <Route path="/Shoppingcar" component={Shoppingcar}/> 
-      <Route path="/Detail" component={Detail}/> 
+      <Route path="/Detail"   render={()=><div><Detail /><Footer /></div>} /> 
     </div>
   </Router>
 )

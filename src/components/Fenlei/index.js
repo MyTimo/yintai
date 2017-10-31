@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import './Fenlei.scss';
 
-import '../../style/font_ii41e5eutmkdfgvi/iconfont.css';
+import '../../style/font_kisp4bj0qnay8pvi/iconfont.css';
 
 import {
   BrowserRouter as Router,

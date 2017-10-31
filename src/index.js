@@ -10,6 +10,7 @@ import FenleiReducer from './reducers/FenleiReducer';
 import FenleiReducer2 from './reducers/FenleiReducer2';
 import DetailReducer from './reducers/DetailReducer';
 import Routes from './renders/index';
+import Footer from './components/Footer/index';
 
 const reducer =combineReducers({
 	list:ShouyeReducer,
