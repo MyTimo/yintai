@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import './Detail.scss';
 
-import '../../style/font_kisp4bj0qnay8pvi/iconfont.css';
+import '../../style/font_uk6b27d47j1hsemi/iconfont.css';
 
 import '../Footer/index';
 
