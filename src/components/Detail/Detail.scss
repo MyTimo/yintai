@@ -46,4 +46,28 @@ a{
 			}
 		}
 	}
+	.navs{
+		overflow: hidden;
+		position:relative;
+			left:0;
+			top:px2rem(40px);
+		ul{
+			width:100%;
+			padding:px2rem(5px) 0;
+			overflow: hidden;
+			border-bottom:px2rem(1px) solid #ccc;
+			li{
+				width:px2rem(74px);
+				float:left;
+				font-size:px2rem(15px);
+				text-align:center;
+				border-left:px2rem(1px) solid #ccc;
+				span{
+					display:inline-block;
+					padding:px2rem(3px) 0;
+
+				}
+			}
+		}
+	}
 }

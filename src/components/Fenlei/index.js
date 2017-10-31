@@ -14,6 +14,8 @@ import {
   Link
 } from 'react-router-dom'
 
+
+var sb = 88;
 class FenleiUI extends Component{
 	componentWillMount() {
 		this.props.getList();
@@ -52,7 +54,7 @@ class FenleiUI extends Component{
 		}	
 
 
-
+		
 		
 		// document.querySelector('.pic1 span:nth-of-type(9)').value.slice(0,4);
 									
@@ -75,7 +77,7 @@ class FenleiUI extends Component{
 							this.props.lists.map((item,index)=>{
 								// console.log(this.props.lis)
 								return <li className="he" active-class="red" key={item.id}>
-								<Link to={'/Fenlei/' + item.id}>{item.name}</Link></li>
+								<Link to={'/Fenlei/' + item.id} onClick={()=>{this.props.sb=item.id}}>{item.name}</Link></li>
 							})
 						}					
 					</ul>
@@ -120,12 +122,22 @@ class FenleiUI extends Component{
 
 }
 
+// var sb = 88;
+
+// if(this.props.match.params.film_id){
+// 	sb = this.props.match.params.film_id
+// }else{
+// 	sb = 88;
+// }
+
 function getData(dispatch){
 	// console.log(this.props.match.params.film_id);
 	// var num = Math.random();
 	// console.log(num);
 			// console.log(this);
-	axios.get(`/Services/Proxy.ashx?r=0.6206932046652436&methodName=products.category.getcategory_3.0.0&method=products.category.getcategory&ver=3.0.0`)
+
+
+	axios.get(`/Services/Proxy.ashx?r=0.6206932046652436&methodName=products.category.getcategory_3.0.0&method=products.category.getcategory&ver=3.0.0&categoryid=${this.match.params.film_id}`)
 	.then((res)=>{
 		// console.log(res);
 		dispatch({
@@ -135,10 +147,13 @@ function getData(dispatch){
 	})
 }
 
+// var sb = 88;
+
 function getDatas(dispatch){
-	axios.get(`/Services/Proxy.ashx?r=0.40535104772911246&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=${this.match.params.film_id}`)
+
+	axios.get(`/Services/Proxy.ashx?r=0.7862047651984894&methodName=products.category.getchildcategory_3.0.0&method=products.category.getchildcategory&ver=3.0.0&categoryid=${this.match.params.film_id}`)
 	.then((res)=>{
-		console.log(res);
+		console.log(sb);
 		dispatch({
 			type:"Fens",
 			payload:{lis1:res.data.data.recommend,

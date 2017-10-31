@@ -1,4 +1,4 @@
- const DetailReducer = (state=[],action)=>{
+const DetailReducer = (state=[],action)=>{
 	switch(action.type){
 		case "Detail_type":	
 
