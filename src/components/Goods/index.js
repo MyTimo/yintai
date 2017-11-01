@@ -1,4 +1,4 @@
-import React ,{ Component } from 'react';
+/*import React ,{ Component } from 'react';
 
 import {connect} from 'react-redux';
 import axios from 'axios';
@@ -35,7 +35,57 @@ class Goods extends Component{
 	}
 }
 
+export default Goods;*/
+
+
+
+import React ,{ Component } from 'react';
+
+import {connect} from 'react-redux';
+
+import axios from 'axios';
+
+class GoodsUI extends Component{
+	componentDidMount() {
+		console.log(this)
+		this.props.getList();
+
+	}
+	render(){
+		return(
+			<div>
+				111
+			</div>
+		)
+	}
+}
+
+function getData(dispatch){
+	console.log(this)
+	axios.get(`/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%22${this.props.match.params.goods_id}%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=20179061307`)
+	.then((res)=>{
+		console.log(res);
+/*		dispatch({
+			type:"Show_goods",
+			payload:res.data
+		})*/
+	})
+}
+
+const mapState2props = (state,props)=>{
+	return{
+
+	}
+}
+
+const mapDispatch2props = (state,props)=>{
+	return {
+		getList:()=>{
+			getData()
+		}
+	}
+}
+
+const Goods = connect(mapState2props,mapDispatch2props)(GoodsUI);
+
 export default Goods;
-
-
-

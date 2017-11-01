@@ -1,5 +1,6 @@
 import React ,{ Component } from 'react';
-import { Carousel, WhiteSpace } from 'antd-mobile';
+import { Carousel } from 'antd';
+import 'antd/dist/antd.css';
 import axios from 'axios';
 
 class Swiper extends Component{
@@ -56,7 +57,6 @@ class Swiper extends Component{
         				<a href="#" key={item.id}><img src={item.imgurl} /></a>
       				))}
     			</Carousel>
-    			<WhiteSpace />
     		</div>
 		)
 	}

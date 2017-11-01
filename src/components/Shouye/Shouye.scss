@@ -388,3 +388,99 @@ div{
 		}
 	}
 }
+
+#list{
+	.title{
+		position: relative;
+    	background-color: #f1f1f1;
+    	min-width: px2rem(320px);
+    	max-width: px2rem(640px);
+    	width: auto;
+    	overflow: hidden;
+    	padding-top: px2rem(5px);
+    	img{
+    		width: px2rem(375px);
+    		height: px2rem(28.6px)px;
+		}
+	}
+	.floor{
+		.left{
+			float: left;
+    		width: 50%;
+    		//padding-bottom: px2rem(4px);
+    		overflow: hidden;
+    		border-right: px2rem(3px) solid #f1f1f1;
+/*     		.pic{
+    			height: px2rem(230px);
+    			overflow: hidden;
+    		} */
+    		img{
+    			width: 100%;
+    			height: 100%
+    		}		
+    		.word{
+    			height: px2rem(44px);
+    			line-height: px2rem(22px);
+    			padding: 0 px2rem(8px)px;
+    			margin: px2rem(5px) 0;
+    			overflow: hidden;
+    			color: #333;
+    			font-size: px2rem(16px);
+    		}
+    		.price{
+    			padding: 0 px2rem(8px);
+    			.now{
+    				margin-right: 8px;
+    				color: #e5004f;
+    				font-weight: 500;
+    				font-size: px2rem(17px);
+    			}
+    			.old{
+    				color: #666;
+    				font-size: px2rem(12px);
+    				    text-decoration: line-through;
+    			}
+    		}
+		}
+		.right{
+			float: left;
+    		width: 50%;
+    		padding-bottom: px2rem(4px);
+    		overflow: hidden;
+/*     		.pic{
+    			height: px2rem(230px);
+    			overflow: hidden;
+    		} */
+    		img{
+    			width: 100%;
+    		}
+    		.word{
+    			height: px2rem(44px);
+    			line-height: px2rem(22px);
+    			padding: 0 px2rem(8px)px;
+    			margin: px2rem(5px) 0;
+    			overflow: hidden;
+    			color: #333;
+    			font-size: px2rem(16px);
+    		}  
+    		.price{
+    			padding: 0 px2rem(8px);
+    			.now{
+    				margin-right: 8px;
+    				color: #e5004f;
+    				font-weight: 500;
+    				font-size: px2rem(17px);
+    			}
+    			.old{
+    				color: #666;
+    				font-size: px2rem(12px);
+    				    text-decoration: line-through;
+    			}
+    		}  		
+		}
+	}
+	.ant-back-top{
+		bottom: px2rem(63px);
+		right: px2rem(15px);
+	}
+}
