@@ -28,11 +28,11 @@ const Routes = () => (
       <Route path="/goods/:goods_id" component={Goods}/>
 
       <Route path="/Shoppingcar" component={Shoppingcar}/> 
-<<<<<<< HEAD
+
       <Route path="/Detail/:detail_id?" component={Detail}  /> 
-=======
+
       <Route path="/Detail/:detail_id"   render={()=><div><Detail /><Footer /></div>} /> 
->>>>>>> 9a72db6ebbb60698ee9eb27c173f211701b88a73
+
     </div>
   </Router>
 )
