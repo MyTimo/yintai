@@ -28,7 +28,7 @@ const Routes = () => (
       <Route path="/goods/:goods_id" component={Goods}/>
 
       <Route path="/Shoppingcar" component={Shoppingcar}/> 
-      <Route path="/Detail/:detail_id?" render={()=><div><Detail /><Footer /></div>} /> 
+      <Route path="/Detail/:detail_id?" component={Detail}  /> 
     </div>
   </Router>
 )

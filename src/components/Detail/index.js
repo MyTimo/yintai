@@ -20,15 +20,37 @@ import {
 class DetailUI extends Component{
 	componentDidMount() {
 		console.log(this);
-		var id = 50003759;
-		this.props.getListes(id);		
+		
+		this.props.getListes();		
 	}
 	render(){
+		var man = null;
+		if(this.props.listes.promotionlabel){
+			man = this.props.listes.promotionlabel
+		}
 		var items = null;
 		if(this.props.listes){
 			items = this.props.listes.map((item,index)=>{
 				return 	<div>
-							<img src={item.image} />
+							<li name="21-465-6631" key={item.brandid}>
+								<Link to={'/Goods/' + item.groupno}>
+									<dl class="cf">
+										<dd>
+											<img src={item.image} width="90" height="120" />
+										</dd>
+										<dt>
+											<p class="tit">{item.name}</p>
+											<div class="tip"><span className={item.promotionlabel!=null?'dell':'delll'}>{item.promotionlabel}</span>	</div>
+											<p class="shi">
+												<span class="shichang">￥{item.price}.00</span>
+											</p>
+											<p class="int ">
+												<span class="pink">￥{item.promotion_price}.00</span>
+											</p>
+										</dt>
+									</dl>
+								</Link>
+							</li>							
 						</div>
 			})	
 		}
@@ -49,11 +71,11 @@ class DetailUI extends Component{
 						<li><span>筛选</span><i></i></li>
 					</ul>	
 				</div>
-				<div>
+				<ul className="del">
 					{
 						items						
 					}
-				</div>	
+				</ul>	
 		
 			</div>	
 		)
@@ -62,18 +84,18 @@ class DetailUI extends Component{
 
 
 
-function getDataes(dispatch,id){
+function getDataes(dispatch){
 	console.log(this);
-	if(id){
-		axios.get(`/Services/Proxy.ashx?r=201710311602&method=products.getlist&ver=2.1&data=%7B%22order_type%22%3A0%2C%22page_index%22%3A1%2C%22displaycount%22%3A30%2C%22query_string%22%3A%22N%3D${id}%22%2C%22keyword%22%3A%22%22%7D`)
+	
+		axios.get(`/Services/Proxy.ashx?r=201710311602&method=products.getlist&ver=2.1&data=%7B%22order_type%22%3A0%2C%22page_index%22%3A1%2C%22displaycount%22%3A30%2C%22query_string%22%3A%22N%3D${this.match.params.detail_id}%22%2C%22keyword%22%3A%22%22%7D`)
 	.then((res)=>{
-		// console.log(res);
+		console.log(res);
 		dispatch({
 			type:"Detail_type",
 			payload:res.data.data.product_list
 		})
 	})
-	}
+	
 }
 
 const mapState2props = (state,props)=>{
@@ -84,8 +106,9 @@ const mapState2props = (state,props)=>{
 
 const mapDispatch2props = (dispatch,props)=>{
 	return {
-		getListes:function (id){
-			getDataes.bind(this)(dispatch,id)
+		getListes:function (){
+			// console.log(this);
+			getDataes.bind(this)(dispatch)
 		}
 	}
 }

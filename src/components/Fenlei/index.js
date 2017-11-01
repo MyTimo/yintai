@@ -11,7 +11,8 @@ import '../../style/font_uk6b27d47j1hsemi/iconfont.css';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  NavLink
 } from 'react-router-dom'
 
 
@@ -28,7 +29,7 @@ class FenleiUI extends Component{
 			items = this.props.lis.lis4.map((item,index)=>{
 			return 	<li key={item.categoryid} className="pit">
 						<Link to={`/Detail/${item.jumpurl.substring(item.jumpurl.indexOf('searchCondition=N%3D')+20,item.jumpurl.indexOf('searchCondition=N%3D')+28)}`}>
-}`}>
+
 					 		<div className="pic1"><img src={item.imageurl} /></div>
 					 		<div className="spa">{item.name}</div>
 				 		</Link>
@@ -82,8 +83,8 @@ class FenleiUI extends Component{
 						{
 							this.props.lists.map((item,index)=>{
 								// console.log(this.props.lis)
-								return <li className="he" active-class="red" key={item.id}>
-								<Link to={'/Fenlei/' + item.id} onClick={()=>{this.props.sb=item.id}}>{item.name}</Link></li>
+								return <li className="he" key={item.id}>
+								<NavLink to={'/Fenlei/' + item.id}  onClick={()=>{this.props.sb=item.id}}>{item.name}</NavLink></li>
 							})
 						}					
 					</ul>

@@ -47,10 +47,11 @@ a{
 		}
 	}
 	.navs{
-		overflow: hidden;
+		// overflow: hidden;
 		position:relative;
 			left:0;
 			top:px2rem(40px);
+			margin-bottom: px2rem(40px);
 		ul{
 			width:100%;
 			padding:px2rem(5px) 0;
@@ -81,6 +82,60 @@ a{
 			li:nth-of-type(3) span{
 				padding-top:px2rem(-6px);
 			}
+		}
+	}
+	.del{
+		.cf{
+			border-bottom:px2rem(1px) dashed #ccc;
+			padding:px2rem(10px);
+			overflow: hidden;
+			dd{
+			    float: left;
+			    width: px2rem(92px);
+			    height: px2rem(122px);
+				img{
+					border:px2rem(1px) solid #ccc;
+				}
+			}
+			dt{
+			    margin-left:px2rem(102px);
+		        box-sizing: border-box;
+		        .tit{
+		        	font-size: px2rem(16px);
+		        	height:px2rem(44px);
+		        }
+		        .int{
+		        	    font-size: px2rem(16px);
+					    font-weight: 500;
+					    color: #e5004f;
+		        }
+		        .shi{
+		        	.shichang{
+		        		color:#666666;
+		        		text-decoration: line-through;
+		        	}
+		        }
+		        .tip{
+		        	
+		        	.dell{
+		        		display:block;
+		        		margin: px2rem(4px) px2rem(5px) px2rem(4px) 0;
+						    display: inline-block;
+						    border-radius: px2rem(5px);
+						    padding: px2rem(3px) px2rem(5px);
+						    min-width: px2rem(32px);
+						    text-align: center;
+						    font-size: px2rem(12px);;
+						    background-color: #FF3C7E;
+						    color: #fff;
+		        	}
+		        	.delll{
+		        		display:none;
+		        	}
+		        }
+			}
+			
+			
 		}
 	}
 }
