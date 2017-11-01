@@ -11,6 +11,7 @@ import Banner from './banner'
 import Boom from './boom'
 import Week from './week'
 import Repeat from './repeat'
+import Repeatx from './repeat2'
 
 class ShouyeUI extends Component{
 	componentDidMount() {
@@ -25,7 +26,14 @@ class ShouyeUI extends Component{
 				<Banner></Banner>
 				<Boom></Boom>
 				<Week></Week>
-				<Repeat></Repeat>
+				<Repeat a={10}></Repeat>
+				<Repeatx a={14}></Repeatx>
+				<Repeat a={18}></Repeat>
+				<Repeat a={26}></Repeat>
+				<Repeatx a={31}></Repeatx>
+				<Repeat a={36}></Repeat>
+				<Repeatx a={40}></Repeatx>
+				<Repeat a={44}></Repeat>
 			</div>
 		)
 	}

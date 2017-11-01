@@ -18,10 +18,10 @@ class Week extends Component{
 	componentDidMount(){
 		axios.get('/Services/Proxy.ashx?r=20171028908&os=HTML5&client_v=1.0.0&pageid=104001&previewtime=0&methodName=products.template.getpage_1.0.0&method=products.template.getpage&apptype=10&ver=1.0.0&pageindex=1')
 		.then((res)=>{
-			this.state.weeks_floor1 = res.data.data.templatelist[6].items[0];
-			this.state.weeks_floor2 = res.data.data.templatelist[7].items;
-			this.state.weeks_floor3 = res.data.data.templatelist[8].items;
-			this.state.weeks_floor4 = res.data.data.templatelist[9].items;
+			this.state.weeks_floor1 = res.data.data.templatelist[5].items[0];
+			this.state.weeks_floor2 = res.data.data.templatelist[6].items;
+			this.state.weeks_floor3 = res.data.data.templatelist[7].items;
+			this.state.weeks_floor4 = res.data.data.templatelist[8].items;
 			
 			this.setState({
 				weeks_floor1:this.state.weeks_floor1,

@@ -14,14 +14,13 @@ import{
 
 
 
-class RepeatUI extends Component{
+class RepeatxUI extends Component{
 	constructor(){
 		super();
 		this.state = {
 			floor1:[],
 			floor2:[],
-			floor3:[],
-			floor4:[]
+			floor3:[]
 		}
 	}
 	componentDidMount() {
@@ -35,8 +34,8 @@ class RepeatUI extends Component{
 			console.log(res);
 			this.state.floor1=res.data.data.templatelist[a].items;
 			this.state.floor2=res.data.data.templatelist[b].items;
-			this.state.floor3=res.data.data.templatelist[c].items;
-			this.state.floor4=res.data.data.templatelist[d].items;
+			this.state.floor3=res.data.data.templatelist[c].items
+			this.state.floor4=res.data.data.templatelist[d].items
 			this.setState({
 				floor1:this.state.floor1,
 				floor2:this.state.floor2,
@@ -80,7 +79,7 @@ class RepeatUI extends Component{
 		}
 
 		return(
-			<div id="repeat">
+			<div id="repeat2">
 				{floor1}
 				<div className="floor2">
 					{floor2}
@@ -108,6 +107,6 @@ const mapDispatch2props = (dispatch,props)=>{
 	}
 }
 
-const Repeat = connect(mapState2props,mapDispatch2props)(RepeatUI);
+const Repeatx = connect(mapState2props,mapDispatch2props)(RepeatxUI);
 
-export default Repeat;
+export default Repeatx;

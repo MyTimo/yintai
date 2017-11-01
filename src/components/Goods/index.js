@@ -12,18 +12,18 @@ class Goods extends Component{
 		}
 	}
 
-	/*componentDidMount(){
-		axios.get('/Services/Proxy.ashx?r=20171028908&os=HTML5&client_v=1.0.0&pageid=104001&previewtime=0&methodName=products.template.getpage_1.0.0&method=products.template.getpage&apptype=10&ver=1.0.0&pageindex=1')
+	componentDidMount(){
+		console.log(this)
+		axios.get(`/Services/Proxy.ashx?data=%7B%22itemcode%22%3A%22${this.props.match.params.goods_id}%22%2C%22userid%22%3A%22%22%7D&userid=&methodName=products.getproductdetail_1.0.0&method=products.getproductdetail&ver=1.0.0&r=20179061307`)
 		.then((res)=>{
-			
-			
+			console.log(res)
 			this.setState({
 				
 			})
 		}).catch((error)=>{
 			console.log("XXX")
 		})
-	}*/
+	}
 
 
 	render() {
@@ -36,3 +36,6 @@ class Goods extends Component{
 }
 
 export default Goods;
+
+
+

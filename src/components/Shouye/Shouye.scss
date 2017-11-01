@@ -216,8 +216,175 @@ div{
 	}
 	.week-floor4{
 		img{
-			width: 366px;
+			width: 100%;
     		height: 80.0625px;
+		}
+	}
+}
+
+#repeat{
+	.floor1{
+		position: relative;
+    	background-color: #f1f1f1;
+    	min-width: px2rem(320px);
+    	max-width: px2rem(640px);
+    	width: auto;
+    	overflow: hidden;
+    	padding-top: px2rem(5px);
+    	img{
+    		width: px2rem(375px);
+    		height: px2rem(28.6px)px;
+		}
+	}
+	.floor2{
+		position: relative;
+		width: 100%;
+		height: 163px;
+		.floor2-0{
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.floor2-1{
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.floor2-2{
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.floor3{
+		.floor3-0{
+			float: left;
+			width: 33%;
+			img{
+				width: 100%;
+			}
+		}
+		.floor3-1{
+			float: left;
+			width: 33%;
+			border-left: 1px solid #f1f1f1;
+    		border-right: 1px solid #f1f1f1;
+			img{
+				width: 100%;
+			}
+		}
+		.floor3-2{
+			float: left;
+			width: 33%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.floor4{
+		img{
+			width: 100%;
+    		height: px2rem(80px);
+		}
+	}
+}
+
+#repeat2{
+	.floor1{
+		position: relative;
+    	background-color: #f1f1f1;
+    	min-width: px2rem(320px);
+    	max-width: px2rem(640px);
+    	width: auto;
+    	overflow: hidden;
+    	padding-top: px2rem(5px);
+    	img{
+    		width: px2rem(375px);
+    		height: px2rem(28.6px)px;
+		}
+	}
+	.floor2{
+		position: relative;
+		width: 100%;
+		height: 163px;
+		.floor2-2{
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.floor2-1{
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.floor2-0{
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.floor3{
+		.floor3-0{
+			float: left;
+			width: 33%;
+			img{
+				width: 100%;
+			}
+		}
+		.floor3-1{
+			float: left;
+			width: 33%;
+			border-left: 1px solid #f1f1f1;
+    		border-right: 1px solid #f1f1f1;
+			img{
+				width: 100%;
+			}
+		}
+		.floor3-2{
+			float: left;
+			width: 33%;
+			img{
+				width: 100%;
+			}
+		}
+	}	
+	.floor4{
+		img{
+			width: 100%;
+    		height: px2rem(80px);
 		}
 	}
 }
