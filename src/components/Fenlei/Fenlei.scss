@@ -79,15 +79,18 @@ a{
 	}
 	.hdf{
 		width:100%;
-		overflow: hidden;
+		// overflow: hidden;
 		.pip{
 		// overflow: hidden;
+			width:25%;
 			overflow-y: auto;
 		    float: left;
 		    margin-top:px2rem(100px);
-		.ios {
-			width: 25%;
 		    height: 100%;
+		.ios {
+			width:100%;
+			// width: px2rem(94px);
+		    
 		    overflow-y: auto;
 			
 			
@@ -115,11 +118,13 @@ a{
 			overflow-y: auto;
 			// overflow-x: hidden;
 			width: 75%;
+			// height:100%;
+			float:left;
 			.lp{
 				// overflow: hidden
 			}
 			position:absolute;
-			overflow: hidden;
+			// overflow: hidden;
 			left:px2rem(94px);
 			top:0;
 			.pic{
