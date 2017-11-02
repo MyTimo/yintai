@@ -35,6 +35,10 @@ const Routes = () => (
       <Route path="/Register" component={Register}/> 
 
 
+      {/*<Route path="/Detail/:detail_id"   render={()=><div><Detail /><Footer /></div>} /> */}
+
+
+
     </div>
   </Router>
 )

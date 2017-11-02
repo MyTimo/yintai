@@ -12,16 +12,19 @@ import DetailReducer from './reducers/DetailReducer';
 import QiangxianReducer from './reducers/QiangxianReducer';
 import Routes from './renders/index';
 import Footer from './components/Footer/index';
+import GoodsReducer from './reducers/GoodsReducer';
 
 const reducer =combineReducers({
 	list:ShouyeReducer,
 	lists:FenleiReducer,
 	lis:FenleiReducer2,
 	list_Detail:DetailReducer,
+	goods:GoodsReducer,
 	list_Qiangxian:QiangxianReducer
 })
 
-const store = createStore(reducer,{list:[],lists:[],lis:[],list_Detail:[],list_Qiangxian:[]});
+const store = createStore(reducer,{list:[],lists:[],lis:[],list_Detail:[],list_Qiangxian:[],goods:{slider:[],name:"",price:"",market:""}});
+
 
 function add(){
 	ReactDOM.render(<Provider store={store}><div><Routes /></div></Provider>, document.getElementById('root'));
