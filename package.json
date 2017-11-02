@@ -110,6 +110,14 @@
         "^/Services": "/Services"
       },
       "ws": true
+    },
+     "/h5": {
+      "target": "https://item.yintai.com",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/h5": "/h5"
+      },
+      "ws": true
     }
   }
 }

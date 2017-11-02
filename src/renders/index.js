@@ -31,7 +31,7 @@ const Routes = () => (
 
       <Route path="/Detail/:detail_id?" component={Detail}  /> 
 
-      <Route path="/Detail/:detail_id"   render={()=><div><Detail /><Footer /></div>} /> 
+      {/*<Route path="/Detail/:detail_id"   render={()=><div><Detail /><Footer /></div>} /> */}
 
     </div>
   </Router>
