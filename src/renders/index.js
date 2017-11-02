@@ -31,7 +31,11 @@ const Routes = () => (
 
       <Route path="/Detail/:detail_id?" component={Detail}  /> 
 
+<<<<<<< HEAD
       
+=======
+      <Route path="/Detail/:detail_id"   render={()=><div><Detail /><Footer /></div>} /> 
+>>>>>>> 49a95ef3d594970ff3413b846e14439227c94d9e
 
     </div>
   </Router>

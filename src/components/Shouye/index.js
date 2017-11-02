@@ -5,6 +5,8 @@ import {connect} from 'react-redux';
 import axios from 'axios';
 import './Shouye.scss'
 
+import { BackTop } from 'antd';
+
 import Search from './search'
 import Swiper from './Carousel'
 import Banner from './banner'
@@ -12,6 +14,7 @@ import Boom from './boom'
 import Week from './week'
 import Repeat from './repeat'
 import Repeatx from './repeat2'
+import List from './list'
 
 class ShouyeUI extends Component{
 	componentDidMount() {
@@ -27,13 +30,20 @@ class ShouyeUI extends Component{
 				<Boom></Boom>
 				<Week></Week>
 				<Repeat a={10}></Repeat>
-				<Repeatx a={14}></Repeatx>
-				<Repeat a={18}></Repeat>
-				<Repeat a={26}></Repeat>
-				<Repeatx a={31}></Repeatx>
-				<Repeat a={36}></Repeat>
-				<Repeatx a={40}></Repeatx>
-				<Repeat a={44}></Repeat>
+				<Repeatx a={15}></Repeatx>
+				<Repeat a={19}></Repeat>
+				<Repeat a={27}></Repeat>
+				<Repeatx a={32}></Repeatx>
+				<Repeat a={37}></Repeat>
+				<Repeatx a={41}></Repeatx>
+				<Repeat a={45}></Repeat>
+				<List></List>
+				<div>
+    				<BackTop />
+    				Scroll down to see the bottom-right
+    				<strong style={{ color: 'rgba(64, 64, 64, 0.6)' }}> gray </strong>
+    				button.
+  				</div>
 			</div>
 		)
 	}
