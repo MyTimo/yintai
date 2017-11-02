@@ -8,7 +8,7 @@ import './Detail.scss';
 
 import '../../style/font_uk6b27d47j1hsemi/iconfont.css';
 
-import '../Footer/index';
+import Footer from '../Footer/index';
 
 import {
   BrowserRouter as Router,
@@ -76,7 +76,7 @@ class DetailUI extends Component{
 						items						
 					}
 				</ul>	
-				
+				<Footer />
 			</div>	
 		)
 	}

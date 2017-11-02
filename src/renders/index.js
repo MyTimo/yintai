@@ -7,6 +7,7 @@ import Fenlei from '../components/Fenlei';
 import Goods from '../components/Goods';
 import Detail from '../components/Detail/index';
 import Footer from '../components/Footer/index';
+import Register from '../components/Mine/Register';
 
 
 import {
@@ -30,6 +31,8 @@ const Routes = () => (
       <Route path="/Shoppingcar" component={Shoppingcar}/> 
 
       <Route path="/Detail/:detail_id?" component={Detail}  /> 
+
+      <Route path="/Register" component={Register}/> 
 
 
     </div>

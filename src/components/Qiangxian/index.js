@@ -6,6 +6,10 @@ import axios from 'axios';
 
 import './Qiangxian.scss';
 
+import Footer from '../Footer/index';
+
+import { BackTop } from 'antd';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -20,8 +24,7 @@ class QiangxianUI extends Component{
 	render(){
 		var date = null;
 		if(this.props.list.endtime){
-			date = (new Date()).getTime()-Date.parse(this.props.list.endtime.split('T').join(','));
-		
+			date = (new Date()).getTime()-Date.parse(this.props.list.endtime.split('T').join(','));	
 		}
 		
 		return(
@@ -98,6 +101,13 @@ class QiangxianUI extends Component{
     				</ul>
     				
     			</div>
+    			<Footer />
+                <div>
+                    <BackTop />
+                    
+                    <strong style={{ color: 'rgba(64, 64, 64, 0.6)' }}></strong>
+                   
+                </div>
 			</div>
 		)
 	}

@@ -1,0 +1,70 @@
+@function px2rem($px){
+  @return $px/100px *1rem;
+}
+	*{
+		margin:0;
+		padding:0;
+	}
+li{
+	list-style:none;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+
+
+#Register{
+	.hea{
+		position:fixed;
+		z-index:1000;
+		background:white;
+		left:0;
+		top:0;
+		overflow: hidden;
+		height:px2rem(40px);
+		border-bottom:px2rem(1px) solid #ccc;
+		width:100%;
+		div{
+			float:left;
+			width:33%;
+			text-align: center;
+			line-height: px2rem(40px);
+			span{
+				padding:px2rem(10px);
+			}
+		}
+		.lef{
+			span{
+				margin-left: px2rem(-70px);
+			}
+		}
+		.rig{
+			span{
+				margin-right: px2rem(-70px);
+			}
+		}
+	}
+	.jis{
+		.ythzForm{
+		    border-top: px2rem(1px) solid #d2d2d2;
+			.field{
+			    position: relative;
+			    padding-left: px2rem(20px);
+			    background: #fff;
+		        height: px2rem(44px);
+			    line-height: px2rem(44px);
+			    border-bottom: px2rem(1px) solid #d2d2d2;
+			    #cellPhone{
+		    	    height: px2rem(20px);
+				    width: 50%;
+				    color: #333;
+			        outline: 0;
+					border: 0;
+				    font-size: 100%;
+					vertical-align: middle;
+			    }
+			}
+		}
+	}
+}

@@ -10,6 +10,12 @@ import img1 from '../../style/img/img1.png';
 
 import img2 from '../../style/img/img2.png';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+
 class MineUI extends Component{
 	componentDidMount() {
 		this.props.getList();
@@ -45,7 +51,7 @@ class MineUI extends Component{
            			<div id="passportLogin" class="login-button">登 录</div>
            			<div class="login-reg">
            				<a class="forget-password">忘记密码？</a>
-           				<a class="register">注册</a>
+           				<Link to={'/Register'} class="register">注册</Link>
            			</div>
            			<p class="ythz-desc">银泰护照即银泰门店会员账号，一般为手机号，如未设置过密码或忘记密码可点击“忘记密码”进行找回。
            			</p>
