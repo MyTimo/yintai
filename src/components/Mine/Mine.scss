@@ -1,0 +1,186 @@
+@function px2rem($px){
+  @return $px/100px *1rem;
+}
+	*{
+		margin:0;
+		padding:0;
+	}
+li{
+	list-style:none;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+
+#Mine{
+	width:100%;
+	// overflow:hidden;
+	background-color: #f3f3f3;
+	padding-bottom:px2rem(100px);
+	.hea{
+		position:fixed;
+		z-index:1000;
+		background:white;
+		left:0;
+		top:0;
+		overflow: hidden;
+		height:px2rem(40px);
+		border-bottom:px2rem(1px) solid #ccc;
+		width:100%;
+		div{
+			float:left;
+			width:33%;
+			text-align: center;
+			line-height: px2rem(40px);
+			span{
+				padding:px2rem(10px);
+			}
+		}
+		.lef{
+			span{
+				margin-left: px2rem(-70px);
+			}
+		}
+		.rig{
+			span{
+				margin-right: px2rem(-70px);
+			}
+		}
+	}
+	.login{
+	    display: flex;
+	    position:relative;
+	    left:0;
+	    top:px2rem(40px);
+        box-sizing: border-box;
+        outline: 0;
+        font-family: sans-serif;
+		font-size: px2rem(14px);
+		.login-tab-item{
+		    -webkit-box-flex: 1;
+		    flex: 1;
+		    position: relative;
+		    height:px2rem(40px);
+		    line-height: px2rem(39px);
+		    font-size: px2rem(14px);
+		    color: #999;
+		    background: #fff;
+		    border-bottom: px2rem(1px) solid #ccc;
+		    cursor: pointer;
+	        text-align: center;
+	        b{
+	        	position: absolute;
+			    width: px2rem(1px);
+			    height: px2rem(20px);
+			    right: 0;
+			    top: 50%;
+			    margin-top: px2rem(-10px);
+			    background: #d2d2d2;
+	        }
+		}
+		.scancode-login-tab{
+			display:none;
+		}
+		.active{
+		    border-bottom: px2rem(3px) solid #e5004f;
+			color: #333;
+		}
+	}
+	.bot{
+		position:relative;
+		left:0;
+		top:px2rem(60px);
+		
+		
+		.inp-wrap{
+		    height: px2rem(61px);
+		    line-height: px2rem(39px);
+		    background: #fff;
+		    padding: px2rem(10px) px2rem(18px);
+		    border-top: px2rem(1px) solid #d5d5d5;
+		    border-bottom: px2rem(1px) solid #d5d5d5;
+		    #passportname{
+		    	outline: 0;
+		    	border:0;
+	    	    height: px2rem(30px);
+			    line-height: px2rem(30px);
+			    width: 80%;
+			    font-size: px2rem(16px);
+			    color: #666;
+		    }
+		    img{
+	    	    width: px2rem(25px);
+				height: px2rem(25px);
+			    vertical-align: middle;
+				margin-right:  px2rem(20px);
+		    }
+		    #passportword{
+		    	height: px2rem(30px);
+			    line-height: px2rem(30px);
+			    width: 80%;
+			    font-size: px2rem(16px);
+			    color: #666;
+			    outline: 0;
+		    	border:0;
+		    }
+		}
+		.yzhz{
+			display: none;
+		}
+		.login-button{
+			margin: px2rem(10px);
+		    text-align: center;
+		    height: px2rem(50px);
+		    line-height: px2rem(50px);
+		    font-size: px2rem(18px);
+		    font-weight: 500;
+		    border-radius: px2rem(5px);
+		    background-color: #e5004f;
+		    color: #fff;
+		    cursor: pointer;
+		}
+		.login-reg{
+			    text-align: right;
+    			margin: px2rem(10px);
+			.forget-password{
+			    display: block;
+			    height: px2rem(30px);
+			    line-height: px2rem(30px);
+			    padding-right: px2rem(2px);
+			    // color: #e5004f;
+		        font-size: px2rem(16px);
+			    color: #999;
+			    padding-left: px2rem(10px);
+			    cursor: pointer;
+			     float: left;
+			}
+			.register{
+			    display: block;
+			    height: px2rem(30px);
+			    line-height: px2rem(30px);
+			    padding-right: px2rem(2px);
+			    color: #e5004f;
+			    cursor: pointer;
+		        float: right;
+			    zoom: 1;
+			}
+		}
+		.ythz-desc{
+			padding: px2rem(30px) 10px 0;
+		    line-height: px2rem(16px);
+		    font-size: px2rem(12px);
+		    color: #666;
+		    position:relative;
+		    left:0;
+		    top:px2rem(30px);
+		}
+		.ft{
+		    margin-top: 15%;
+	        width: 100%;
+		    line-height: 22px;
+		    text-align: center;
+		    color: #999;
+		}
+	}
+}

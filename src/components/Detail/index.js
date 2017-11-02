@@ -19,7 +19,7 @@ import {
 
 class DetailUI extends Component{
 	componentDidMount() {
-		console.log(this);
+		// console.log(this);
 		
 		this.props.getListes();		
 	}
@@ -59,7 +59,7 @@ class DetailUI extends Component{
 			<div id="Detail">
 				<div className="hea">
 					<div className="lef"><span className="iconfont">&#xe89f;</span></div>
-					<div className="mid"><span>分类</span></div>
+					<div className="mid"><span>{this.props.listes.name}</span></div>
 					<div className="rig"><span className="iconfont">&#xe606;</span></div>
 				</div>
 				<div className="navs">
@@ -76,7 +76,7 @@ class DetailUI extends Component{
 						items						
 					}
 				</ul>	
-		
+				
 			</div>	
 		)
 	}
@@ -116,3 +116,9 @@ const mapDispatch2props = (dispatch,props)=>{
 const Detail = connect(mapState2props,mapDispatch2props)(DetailUI);
 
 export default Detail;
+
+
+
+
+
+
