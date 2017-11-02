@@ -19,7 +19,7 @@ class Footer extends Component {
 		super();
 		// 初始化状态
 		this.state = {
-			
+			list:[]
 		}
 		// 修正事件的指针
 		// this.addTodo = this.addTodo.bind(this);
@@ -31,22 +31,22 @@ class Footer extends Component {
 			<div id='Footer'>
 				<ul className="cf">
 					<li>
-						<Link to={'/'}  href="//m.yintai.com" className="home">
+						<Link to={'/'} exact className="home">
 							<i className="iconfont">&#xe600;</i><span>首页</span>
 						</Link>
 					</li>
 					<li>
-						<Link to={'/Qiangxian'} href="//m.yintai.com/LimitBuy/SaleActiveList" className="sale">
+						<Link to={'/Qiangxian'}  className="sale">
 							<i className="iconfont">&#xe601;</i><span>抢先</span>
 						</Link>
 					</li>
 					<li>
-						<Link to={'/Fenlei/1'} href="//m.yintai.com/Category" className="class">
+						<Link to={'/Fenlei/1'} className="class">
 							<i className="iconfont">&#xe61f;</i><span>分类</span>
 						</Link>
 					</li>
 					<li>
-						<Link to={'/Shoppingcar'} href="//cart.yintai.com/?platformid=1" className="cart">
+						<Link to={'/Shoppingcar'} className="cart">
 							<i className="iconfont">&#xe503;</i><span>购物车</span>
 						</Link>
 					</li>

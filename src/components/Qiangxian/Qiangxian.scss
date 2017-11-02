@@ -1,0 +1,160 @@
+@function px2rem($px){
+  @return $px/100px *1rem;
+}
+	*{
+		margin:0;
+		padding:0;
+	}
+li{
+	list-style:none;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+
+#Qiangxian{
+	width:100%;
+	// overflow:hidden;
+	// background-color: #f3f3f3;
+	// padding-bottom:px2rem(100px);
+	.hea{
+		position:fixed;
+		z-index:1000;
+		background:white;
+		left:0;
+		top:0;
+		overflow: hidden;
+		height:px2rem(40px);
+		border-bottom:px2rem(1px) solid #ccc;
+		width:100%;
+		div{
+			float:left;
+			width:33%;
+			text-align: center;
+			line-height: px2rem(40px);
+			span{
+				padding:px2rem(10px);
+			}
+		}
+		.mid{
+			span{
+				font-size:px2rem(14px);
+				font-weight: 600;
+			}
+		}
+		.lef{
+			span{
+				margin-left: px2rem(-70px);
+			}
+		}
+		.rig{
+			span{
+				margin-right: px2rem(-70px);
+			}
+		}
+	}
+	.menu{
+	    width: 100%;
+	    height: px2rem(37px);
+	    background-color: #fff;
+	    font-size: px2rem(16px);
+	    margin-top:px2rem(40px);
+	    .key{
+    	    float: left;
+		    width: 20%;
+		    position: relative;
+		    height: px2rem(35px);
+		    border-bottom: px2rem(1px) solid #b2b2b2;
+		    .mkey{
+	    	    // border-bottom: 2px solid #e5004f;
+    	        display: block;
+			    height: px2rem(36px);
+			    padding: px2rem(4px) 0;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    overflow: hidden;
+			    text-align: center;
+			    .con{
+		    	    color: #333;
+	    	        height: px2rem(28px);
+				    line-height: px2rem(28px);
+				    position: relative;
+				    display: block;
+				    box-shadow: px2rem(1px) 0px 0px #ededed inset;
+				    b{
+			    	    font-weight: normal;
+					    margin-right: px2rem(4px);
+				        line-height: px2rem(28px);
+			            white-space: nowrap;
+		                font-size: px2rem(16px);
+				    }
+			    }
+		    }
+		    .current{
+    	    	border-bottom: px2rem(2px) solid #e5004f;
+		    }
+	    }
+	}
+	.ml{
+		position: relative;
+	    min-height: px2rem(250px);
+	    min-width: px2rem(320px);
+	    max-width: px2rem(640px);
+	    margin: 0 auto;
+	    overflow: hidden;
+	    background-color: #fff;
+		.mk{
+			.active_item{
+			    min-width: px2rem(320px);
+			    max-width: px2rem(640px);
+			    margin: px2rem(12px) 0;
+			    .active_item_link{
+		    	    display: block;
+				    position: relative;
+				    overflow: hidden;
+				    .discount-info{
+			    	    position: absolute;
+					    width: px2rem(74px);
+					    height: px2rem(20px);
+					    line-height: px2rem(22px);
+					    padding-left: px2rem(8px);
+					    top: px2rem(6px);
+					    left: 0;
+					    color: #fff;
+					    border-radius: 0 px2rem(20px) px2rem(20px) 0;
+					    background: rgba(229,0,79,0.8);
+					    font-size: px2rem(12px);
+				    }
+			    }
+			    .active-info{
+			    	    margin-right: px2rem(5px);
+					    font-size: px2rem(14px);
+					    font-family: Arial;
+				        display: block;
+					    height: 30px;
+					    line-height: 30px;
+					    border-bottom: 1px solid #d2d2d2;
+					    color: #333;
+					    .active-name{
+					    	    margin-left: px2rem(5px);
+
+					    }
+					    .f-1{
+					    	float:left;
+					    }
+					    .countdown{
+							color: #999;
+							background: url(/mobile/img/ctd-icon-small.png) px2rem(3px) center no-repeat;
+							padding-left: px2rem(24px);
+							margin-right: px2rem(10px);	
+							float:right;
+							.ctd-num{
+								color:red;
+							}
+						}			    
+			    }
+			}
+		}
+	}
+}

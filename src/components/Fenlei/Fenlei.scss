@@ -46,6 +46,7 @@ a{
 			}
 		}
 	}
+
 	.inp{
 		// overflow: hidden;
 		width:100%;
@@ -76,18 +77,27 @@ a{
 			}
 		}
 	}
-	.pip{
+	.hdf{
+		width:100%;
 		// overflow: hidden;
-		position:relative;
-			left:0;
-			top:px2rem(105px);
+		.pip{
+		// overflow: hidden;
+			width:25%;
+			overflow-y: auto;
+		    float: left;
+		    margin-top:px2rem(100px);
+		    height: 100%;
 		.ios {
-			width:px2rem(94px);
-			position:fixed;
-			top:px2rem(105px);;
-			left:0;
+			width:100%;
+			// width: px2rem(94px);
+		    
+		    overflow-y: auto;
+			
+			
 			float:left;
 			background:#f5f5f5;
+		
+			overflow-x: hidden;
 			.he {
 				text-align: center;
 			    height: px2rem(55px);
@@ -100,12 +110,21 @@ a{
 				}
 			}
 		}
-		.pics{
+			
+		
+	}
+	.pou{
+		margin-top:px2rem(100px);
+			overflow-y: auto;
+			// overflow-x: hidden;
+			width: 75%;
+			// height:100%;
+			float:left;
 			.lp{
-				overflow: hidden
+				// overflow: hidden
 			}
 			position:absolute;
-			overflow: hidden;
+			// overflow: hidden;
 			left:px2rem(94px);
 			top:0;
 			.pic{
@@ -141,8 +160,8 @@ a{
 			}
    			
 		}	
-		}	
-		
+		}
 	}
+	
 
 }

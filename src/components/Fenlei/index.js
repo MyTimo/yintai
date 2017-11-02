@@ -63,7 +63,7 @@ class FenleiUI extends Component{
 
 		
 		
-		// document.querySelector('.pic1 span:nth-of-type(9)').value.slice(0,4);
+		
 									
 		return(
 			<div id="fenlei">
@@ -78,49 +78,54 @@ class FenleiUI extends Component{
 						<span><i className="iconfont">&#xe610;</i></span>	
 					</div>					
 				</div>
-				<div className="pip">
-					<ul className="ios">
+				<div className="hdf">
+					<div className="pip">
+						<ul className="ios">
+							{
+								this.props.lists.map((item,index)=>{
+									// console.log(this.props.lis)
+									return <li className="he" key={item.id}>
+									<NavLink to={'/Fenlei/' + item.id}  onClick={()=>{this.props.sb=item.id}}>{item.name}</NavLink></li>
+								})
+							}					
+						</ul>
+					</div>
+					<div className="pou">			
+						<div className="pics">
 						{
-							this.props.lists.map((item,index)=>{
-								// console.log(this.props.lis)
-								return <li className="he" key={item.id}>
-								<NavLink to={'/Fenlei/' + item.id}  onClick={()=>{this.props.sb=item.id}}>{item.name}</NavLink></li>
-							})
-						}					
-					</ul>
-					<div className="pics">
-					{
-						<div className="lp">	
-							<div className="pic">
-								<div className="tit"><span>{this.props.lis.lis3}</span></div>
-								
-									<ul class="qw">
-									 	{items}
-									</ul>
-								
-							</div>	
-							<div className="pic">
-								<div className="tit"><span>{this.props.lis.lis6}</span></div>
+							<div className="lp">	
+								<div className="pic">
+									<div className="tit"><span>{this.props.lis.lis3}</span></div>
 									
-									<ul class="qw">
-									 	{itemes}
-									</ul>
-								
-							</div>	
-							<div className="pic">
-								<div className="tit"><span>{this.props.lis.lis8}</span></div>
+										<ul class="qw">
+										 	{items}
+										</ul>
+									
+								</div>	
+								<div className="pic">
+									<div className="tit"><span>{this.props.lis.lis6}</span></div>
 										
-								<ul class="qw">
-								 	{itemess}
-								</ul>
-								
-							</div>	
-						</div>
+										<ul class="qw">
+										 	{itemes}
+										</ul>
+									
+								</div>	
+								<div className="pic">
+									<div className="tit"><span>{this.props.lis.lis8}</span></div>
+											
+									<ul class="qw">
+									 	{itemess}
+									</ul>
+									
+								</div>	
+							</div>
 
-					}													
-																									
-					</div>					
-				</div>						
+						}													
+																										
+						</div>					
+					</div>	
+				</div>	
+									
 			</div>
 		)
 
