@@ -18,7 +18,7 @@ class MineUI extends Component{
 		return(
 			<div id="Register">
 				<div className="hea">
-					<div className="lef"><span className="iconfont">&#xe89f;</span></div>
+					<a onClick={()=>{this.props.history.goBack()}} className="lef"><span className="iconfont">&#xe89f;</span></a>
 					<div className="mid"><span>注册</span></div>
 					<div className="rig"><span className="iconfont">&#xe606;</span></div>
 				</div>
@@ -40,7 +40,7 @@ class MineUI extends Component{
 			            </div>
 			            <p class="useExplain">请为护照设置密码（6到12位，英文+数字）</p>
 			            <p class="useExplain">注册关联银泰护照后您可使用护照直接登录银泰网。银泰护照即银泰百货会员，注册后，在银泰百货商场可享受会员待遇，并可共享积分等。</p>
-			            <button id="submitButton" class="button forbid" type="button" disabled="disabled">创建银泰护照
+			            <button id="submitButton" class="button forbid" type="button">创建银泰护照
 			            </button>
         			</div>
 				</div>

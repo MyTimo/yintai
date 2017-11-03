@@ -58,7 +58,7 @@ class DetailUI extends Component{
 		return (
 			<div id="Detail">
 				<div className="hea">
-					<div className="lef"><span className="iconfont">&#xe89f;</span></div>
+					<a onClick={()=>{this.props.history.goBack()}} className="lef"><span className="iconfont">&#xe89f;</span></a>
 					<div className="mid"><span>{this.props.listes.name}</span></div>
 					<div className="rig"><span className="iconfont">&#xe606;</span></div>
 				</div>

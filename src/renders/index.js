@@ -36,9 +36,6 @@ const Routes = () => (
 
 
       {/*<Route path="/Detail/:detail_id"   render={()=><div><Detail /><Footer /></div>} /> */}
-
-
-
     </div>
   </Router>
 )

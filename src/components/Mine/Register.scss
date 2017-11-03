@@ -25,7 +25,7 @@ a{
 		height:px2rem(40px);
 		border-bottom:px2rem(1px) solid #ccc;
 		width:100%;
-		div{
+		.lef,.rig,.mid{
 			float:left;
 			width:33%;
 			text-align: center;
@@ -48,6 +48,7 @@ a{
 	.jis{
 		.ythzForm{
 		    border-top: px2rem(1px) solid #d2d2d2;
+		    margin-top: px2rem(40px) ;
 			.field{
 			    position: relative;
 			    padding-left: px2rem(20px);
@@ -55,7 +56,7 @@ a{
 		        height: px2rem(44px);
 			    line-height: px2rem(44px);
 			    border-bottom: px2rem(1px) solid #d2d2d2;
-			    #cellPhone{
+			    #cellPhone,#validateCode,#password,#repassword{
 		    	    height: px2rem(20px);
 				    width: 50%;
 				    color: #333;
@@ -64,6 +65,42 @@ a{
 				    font-size: 100%;
 					vertical-align: middle;
 			    }
+			    #getValidateCode{
+		    	    float: right;
+				    margin-right: px2rem(20px);
+				    margin-top: px2rem(8px);
+				    width: px2rem(90px);
+				    height: px2rem(28px);
+				    line-height: px2rem(26px);
+				    text-align: center;
+				    border: px2rem(1px) solid #999;
+				    border-radius: px2rem(3px);
+				    font-size: px2rem(12px);
+				    color: #666;
+				    background: #fff;
+			    }
+			}
+			.useExplain{
+			    line-height: px2rem(16px);
+			    padding: px2rem(10px);
+			    color: #666;
+			    font-size: px2rem(12px);
+			}
+			#submitButton{
+			    color: #fff;
+				background: #ccc;
+				border: px2rem(1px) solid #ccc;
+			    display: block;
+				width: 80%;
+				height: px2rem(35px);
+				line-height: px2rem(35px);
+				margin: 0 auto px2rem(35px);
+				font-size: px2rem(14px);
+				text-align: center;
+				
+				border-radius:px2rem(6px);
+				
+				outline: 0;
 			}
 		}
 	}
