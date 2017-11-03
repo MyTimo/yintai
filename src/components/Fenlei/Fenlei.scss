@@ -86,7 +86,7 @@ a{
 			overflow-y: auto;
 		    float: left;
 		    margin-top:px2rem(100px);
-		    height: 100%;
+		    height: px2rem(600px);
 		.ios {
 			width:100%;
 			// width: px2rem(94px);
@@ -115,50 +115,49 @@ a{
 	}
 	.pou{
 		margin-top:px2rem(100px);
-			overflow-y: auto;
-			// overflow-x: hidden;
-			width: 75%;
-			// height:100%;
-			float:left;
-			.lp{
-				// overflow: hidden
-			}
-			position:absolute;
-			// overflow: hidden;
-			left:px2rem(94px);
-			top:0;
-			.pic{
+		overflow-y: auto;
+		// overflow-x: hidden;
+		width: 75%;
+		height:100%;
+		float:left;
+		.lp{
+			// overflow: hidden
+		}
+		position:absolute;
+		// overflow: hidden;
+		left:px2rem(94px);
+		top:0;
+		.pic{
+		width:100%;
+		float:left;
+		padding:px2rem(5px);
+		.tit{
+			padding-top:px2rem(10px);
+			width:px2rem(261px);
+			height:px2rem(35px);
+		    background: url(../../style/img/category-area-title@3x.png) no-repeat;
+		    background-size: 100%;
+		    background-position: 50%;
+		    text-align:center;
+		    // line-height: px2rem(35px);
+		}
+		.qw{
+			overflow: hidden;
+			border-sizing:border-box;
 			width:100%;
-			float:left;
-			padding:px2rem(5px);
-			.tit{
-				padding-top:px2rem(10px);
-				width:px2rem(261px);
-				height:px2rem(35px);
-			    background: url(../../style/img/category-area-title@3x.png) no-repeat;
-			    background-size: 100%;
-			    background-position: 50%;
-			    text-align:center;
-			    // line-height: px2rem(35px);
-			}
-			.qw{
-				overflow: hidden;
-				border-sizing:border-box;
-				width:100%;
-				.pit{
-					width:px2rem(86px);
-					float:left;
-					text-align:center;
-					img{
-						width:100%;
-					}
-					.it{
-						display:inline-block;
-						padding:px2rem(10px);
-					}
+			.pit{
+				width:px2rem(86px);
+				float:left;
+				text-align:center;
+				img{
+					width:100%;
+				}
+				.it{
+					display:inline-block;
+					padding:px2rem(10px);
 				}
 			}
-   			
+		}  			
 		}	
 		}
 	}

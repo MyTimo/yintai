@@ -2,6 +2,14 @@ import React ,{ Component } from 'react';
 
 import {connect} from 'react-redux';
 
+import{
+	BrowserRouter as Router,
+	Route,
+	Redirect,
+	Switch,
+	Link
+} from 'react-router-dom';
+
 
 class Search extends Component{
 	render() {
@@ -20,7 +28,7 @@ class Search extends Component{
 						</div>
 					</div>
 					<div className="user">
-						<a></a>
+						<Link to={'/Mine'}></Link>
 					</div>
 				</div>
 			</div>
