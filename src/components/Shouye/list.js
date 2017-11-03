@@ -24,8 +24,8 @@ class List extends Component{
 		axios.get('/Services/Proxy.ashx?r=20171101911&os=HTML5&client_v=1.0.0&pageid=104001&previewtime=0&methodName=products.template.getpage_1.0.0&method=products.template.getpage&apptype=10&ver=1.0.0&pageindex=2')
 		.then((res)=>{
 			console.log(res)
-			this.state.list = res.data.data.templatelist.slice(8);
-			this.state.floor1 = res.data.data.templatelist[7].items[0]
+			this.state.list = res.data.data.templatelist.slice(9);
+			this.state.floor1 = res.data.data.templatelist[8].items[0]
 			this.setState({
 				list:this.state.list,
 				floor1:this.state.floor1

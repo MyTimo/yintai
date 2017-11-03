@@ -17,9 +17,7 @@ import {
 } from 'react-router-dom'
 
 class MineUI extends Component{
-	componentDidMount() {
-		this.props.getList();
-	}
+
 	render(){
 		return(
 			<div id="Mine">
@@ -36,11 +34,11 @@ class MineUI extends Component{
 			    <div className="bot">
 			    	<div class="inp-wrap">
 			    		<img src={img1} width="25" height="25" />
-			    		<input type="text" placeholder="请输入银泰护照号(手机号)" id="passportname" />
+			    		<input type="text" placeholder="请输入银泰护照号(手机号)" ref='user' id="passportname" />
 			    	</div>
 			     	<div class="inp-wrap">
 			    		<img src={img2} width="25" height="25" />
-			    		<input type="password" placeholder="请输入密码" id="passportword" />
+			    		<input type="password" placeholder="请输入密码" ref='pw' id="passportword" />
 			    	</div>
 			    	<div class="inp-wrap no-border-top yzhz">
                 		<input type="text" placeholder="请输入验证码" id="ythzValidCode" />
@@ -48,7 +46,7 @@ class MineUI extends Component{
                 			
                 		</span>
            			</div>
-           			<div id="passportLogin" class="login-button">登 录</div>
+           			<div id="passportLogin" class="login-button" onClick={()=>this.props.login(this.refs.user.value,this.refs.pw.value,this)}>登 录</div>
            			<div class="login-reg">
            				<a class="forget-password">忘记密码？</a>
            				<Link to={'/Register'} class="register">注册</Link>
@@ -84,8 +82,20 @@ const mapState2props = (state,props)=>{
 
 const mapDispatch2props = (state,props)=>{
 	return {
-		getList:()=>{
-			// getData(dispatch)
+		login:function(user,pw,that){
+			let data = {
+				username:user,
+				password:pw
+			};
+			axios.post('/api/login',data)
+			.then((res)=>{
+				if(res.data){
+					alert('success');
+					that.props.history.push('/');
+				}else{
+					alert('error');
+				}
+			})
 		}
 	}
 }

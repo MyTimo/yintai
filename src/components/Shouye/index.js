@@ -36,7 +36,7 @@ class ShouyeUI extends Component{
 				<Repeatx a={32}></Repeatx>
 				<Repeat a={37}></Repeat>
 				<Repeatx a={41}></Repeatx>
-				<Repeat a={45}></Repeat>
+				<Repeat a={46}></Repeat>
 				<List></List>
 				<div>
     				<BackTop />
