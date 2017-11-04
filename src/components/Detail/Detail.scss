@@ -139,4 +139,50 @@ a{
 			
 		}
 	}
+	.red{
+		border-bottom: 1px solid red;
+	}
+	.load{
+		width: 100%;
+		height: px2rem(700px);
+		position: absolute;
+		z-index: 9999;
+		display: block;
+		background: #000;
+		opacity: .3;
+		font-size: px2rem(50px);
+		font-weight: 900;
+		line-height: px2rem(700px);
+		text-align: center;
+		color: red;
+	}
+	.list{
+		width: 100%;
+		height: px2rem(700px);
+		position: absolute;
+		z-index: 999;
+		display: none;
+		background: #666;
+		opacity: .6;
+		ul{
+			position: absolute;
+			z-index: 9999;
+			background: white;
+			opacity: 1;
+			color: red;
+			top: 43px;
+			right: 0;
+			width: px2rem(110px);
+			height: px2rem(173px);
+			li{
+				text-align: center;
+				color: black;
+				opacity: 1;
+				height: 40px;
+				width: 100%;
+				font-size: px2rem(20px);
+
+			}
+		}
+	}
 }

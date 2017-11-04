@@ -12,8 +12,7 @@ import Register from '../components/Mine/Register';
 
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import {createStore,combineReducers} from 'redux';
 import {Provider} from 'react-redux';
@@ -11,7 +11,7 @@ import FenleiReducer2 from './reducers/FenleiReducer2';
 import DetailReducer from './reducers/DetailReducer';
 import QiangxianReducer from './reducers/QiangxianReducer';
 import Routes from './renders/index';
-import Footer from './components/Footer/index';
+//import Footer from './components/Footer/index';
 import GoodsReducer from './reducers/GoodsReducer';
 
 const reducer =combineReducers({
@@ -23,7 +23,7 @@ const reducer =combineReducers({
 	list_Qiangxian:QiangxianReducer
 })
 
-const store = createStore(reducer,{list:[],lists:[],lis:[],list_Detail:[],list_Qiangxian:[],goods:{slider:[],name:"",price:"",market:""}});
+const store = createStore(reducer,{list:[],lists:[],lis:[],list_Detail:[],list_Qiangxian:[],goods:{slider:[],	price:"",market:""}});
 
 
 function add(){
